@@ -17,5 +17,17 @@ body {
 }
 
 .logo {
+  display: block;
   margin: 50px auto 40px;
+}
+
+.main-container {
+  width: 100%;
+}
+
+.content {
+  padding: 32px;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
 }
