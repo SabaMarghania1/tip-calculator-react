@@ -62,3 +62,22 @@
 .resetBtn:hover {
   background: #9fe8df;
 }
+
+.unTouchedBtn {
+  background: #0d686d;
+  color: #00474b;
+}
+@media screen and (min-width: 1200px) {
+  .screen__container {
+    width: 50%;
+    padding: 40px 40px 0px;
+    margin-bottom: 22px;
+  }
+  .row__right {
+    font-size: 48px;
+  }
+
+  .rows {
+    margin-bottom: 120px;
+  }
+}

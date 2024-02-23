@@ -6,6 +6,17 @@
   box-sizing: border-box;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 body {
   font-family: "Space Mono" sans-serif;
   background-color: #c5e4e7;
@@ -30,4 +41,27 @@ body {
   background-color: #fff;
   width: 100%;
   border-radius: 25px 25px 0 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-top: 163px;
+    margin-bottom: 87px;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    max-width: 920px;
+    justify-content: space-between;
+    gap: 48px;
+  }
+
+  .options__container {
+    width: 50%;
+  }
 }

@@ -20,6 +20,7 @@ function App() {
     setBill("");
     setTipValue("");
     setPeople("");
+    setTouched(false);
   }
   return (
     <>
@@ -37,7 +38,12 @@ function App() {
             touched={touched}
             setTouched={setTouched}
           />
-          <Screen tipPerson={tipPerson} totalPerson={totalPerson} handleReset={handleReset} />
+          <Screen
+            tipPerson={tipPerson}
+            totalPerson={totalPerson}
+            handleReset={handleReset}
+            touched={touched}
+          />
         </div>
       </div>
     </>

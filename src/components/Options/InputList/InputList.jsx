@@ -1,5 +1,5 @@
 import Styles from "./inputlist.module.css";
-import {useState} from "react";
+
 function InputList({label, handleSelectedTip, tipValue, setTipValue}) {
   const values = [5, 10, 15, 25, 50];
 

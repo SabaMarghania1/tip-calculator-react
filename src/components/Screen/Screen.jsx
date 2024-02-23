@@ -1,6 +1,6 @@
 import Styles from "./Screen.module.css";
 
-function Screen({tipPerson, totalPerson, handleReset}) {
+function Screen({tipPerson, totalPerson, handleReset, touched}) {
   const correctTip = tipPerson.toFixed(2);
   const correctPerson = totalPerson.toFixed(2);
   return (
@@ -25,7 +25,10 @@ function Screen({tipPerson, totalPerson, handleReset}) {
           </p>
         </div>
       </div>
-      <button onClick={handleReset} className={Styles.resetBtn}>
+      <button
+        onClick={handleReset}
+        className={!touched ? `${Styles.resetBtn} ${Styles.unTouchedBtn}` : Styles.resetBtn}
+      >
         Reset
       </button>
     </div>

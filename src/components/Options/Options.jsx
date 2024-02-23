@@ -15,7 +15,7 @@ function Options({
   setTouched,
 }) {
   return (
-    <div>
+    <div className="options__container">
       <Input
         label="Bill"
         icon={usdIcon}
