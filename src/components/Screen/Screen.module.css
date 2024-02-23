@@ -1,6 +1,5 @@
 .screen__container {
-  margin-top: 32px;
-  padding: 39px 22px 32px 24px;
+  padding: 39px 22px 24px 24px;
   border-radius: 15px;
   background-color: #00474b;
 }
@@ -44,4 +43,22 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.667px;
+}
+
+.resetBtn {
+  width: 100%;
+  padding: 9px 32px;
+  border: none;
+  border-radius: 5px;
+  background: #26c2ae;
+  color: #00474b;
+  font-family: "Space Mono";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.resetBtn:hover {
+  background: #9fe8df;
 }

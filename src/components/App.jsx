@@ -15,7 +15,11 @@ function App() {
   function handleSelectedTip(e) {
     setTipValue(+e.target.value);
   }
-
+  function handleReset() {
+    setBill("");
+    setTipValue("");
+    setPeople("");
+  }
   return (
     <>
       <div className="main-container">
@@ -30,7 +34,7 @@ function App() {
             people={people}
             setPeople={setPeople}
           />
-          <Screen tipPerson={tipPerson} totalPerson={totalPerson} />
+          <Screen tipPerson={tipPerson} totalPerson={totalPerson} handleReset={handleReset} />
         </div>
       </div>
     </>

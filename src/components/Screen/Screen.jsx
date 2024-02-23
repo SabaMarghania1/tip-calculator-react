@@ -1,6 +1,6 @@
 import Styles from "./Screen.module.css";
 
-function Screen({tipPerson, totalPerson}) {
+function Screen({tipPerson, totalPerson, handleReset}) {
   const correctTip = tipPerson.toFixed(2);
   const correctPerson = totalPerson.toFixed(2);
   return (
@@ -17,7 +17,7 @@ function Screen({tipPerson, totalPerson}) {
         </div>
         <div className={Styles.row}>
           <p className={Styles.row__left}>
-            Total Amount
+            Total
             <span>/ person</span>
           </p>
           <p className={Styles.row__right}>
@@ -25,6 +25,9 @@ function Screen({tipPerson, totalPerson}) {
           </p>
         </div>
       </div>
+      <button onClick={handleReset} className={Styles.resetBtn}>
+        Reset
+      </button>
     </div>
   );
 }

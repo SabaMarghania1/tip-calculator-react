@@ -46,3 +46,10 @@ input {
   left: 12px;
   top: 12px;
 }
+
+.error {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  color: #e17457;
+}
