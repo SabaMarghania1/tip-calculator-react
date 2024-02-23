@@ -1,9 +1,7 @@
 import React, {useState} from "react";
 import Styles from "./input.module.css";
 
-function Input({label, icon, bill, setBill}) {
-  const [touched, setTouched] = useState(false);
-
+function Input({label, icon, bill, setBill, touched, setTouched}) {
   const handleInput = e => {
     setBill(+e.target.value);
     setTouched(true);

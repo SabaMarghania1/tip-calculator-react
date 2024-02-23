@@ -8,6 +8,7 @@ function App() {
   const [bill, setBill] = useState("");
   const [tipValue, setTipValue] = useState("");
   const [people, setPeople] = useState("");
+  const [touched, setTouched] = useState(false);
 
   const tipPerson = (bill * tipValue) / 100 / people;
   const totalPerson = bill / people + tipPerson;
@@ -33,6 +34,8 @@ function App() {
             bill={bill}
             people={people}
             setPeople={setPeople}
+            touched={touched}
+            setTouched={setTouched}
           />
           <Screen tipPerson={tipPerson} totalPerson={totalPerson} handleReset={handleReset} />
         </div>
