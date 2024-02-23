@@ -10,7 +10,7 @@ function App() {
   const [people, setPeople] = useState("");
 
   const tipPerson = (bill * tipValue) / 100 / people;
-  console.log(tipPerson.toFixed(2));
+  const totalPerson = bill / people + tipPerson;
 
   function handleSelectedTip(e) {
     setTipValue(+e.target.value);
@@ -30,6 +30,7 @@ function App() {
             people={people}
             setPeople={setPeople}
           />
+          <Screen tipPerson={tipPerson} totalPerson={totalPerson} />
         </div>
       </div>
     </>

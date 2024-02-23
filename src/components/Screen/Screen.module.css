@@ -1,0 +1,47 @@
+.screen__container {
+  margin-top: 32px;
+  padding: 39px 22px 32px 24px;
+  border-radius: 15px;
+  background-color: #00474b;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row__left {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: "Space Mono";
+  font-weight: 700;
+}
+
+.row__left span {
+  color: #7f9d9f;
+  font-family: "Space Mono";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.row__right {
+  color: #26c2ae;
+  text-align: right;
+  font-family: "Space Mono";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.667px;
+}
