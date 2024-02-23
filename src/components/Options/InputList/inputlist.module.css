@@ -1,0 +1,52 @@
+.label {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.tips__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+.tip {
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 5px;
+  width: 145px;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  font-weight: 700;
+}
+
+.regular__tip {
+  background-color: #00474b;
+}
+
+.regular__tip:hover {
+  background-color: #9fe8df;
+  color: black;
+}
+
+.selected {
+  background: #26c2ae;
+  color: black;
+}
+
+.extra__tip {
+  background-color: hsla(185, 38%, 97%, 1);
+  color: hsla(180, 18%, 40%, 1);
+}
+
+.extra__tip::placeholder {
+  color: #547878;
+  text-align: right;
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
