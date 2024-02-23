@@ -24,8 +24,8 @@ function InputList({label, handleSelectedTip, tipValue, setTipValue}) {
         <input
           type="number"
           className={`${Styles.tip} ${Styles.extra__tip}`}
-          onInput={e => setTipValue(+e.target.value)}
-          value={undefined}
+          onInput={e => setTipValue(+e.target.value >= 100 ? 100 : +e.target.value)}
+          value={tipValue > 0 ? tipValue : ""}
           placeholder="Custom"
         />
       </div>

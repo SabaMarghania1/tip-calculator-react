@@ -3,11 +3,14 @@ import logo from "../images/logo.svg";
 import "./App.css";
 
 import Options from "./Options/Options";
-
+import Screen from "./Screen/Screen";
 function App() {
   const [bill, setBill] = useState("");
   const [tipValue, setTipValue] = useState("");
-  console.log(tipValue);
+  const [people, setPeople] = useState("");
+
+  const tipPerson = (bill * tipValue) / 100 / people;
+  console.log(tipPerson.toFixed(2));
 
   function handleSelectedTip(e) {
     setTipValue(+e.target.value);
@@ -22,8 +25,10 @@ function App() {
             handleSelectedTip={handleSelectedTip}
             tipValue={tipValue}
             setTipValue={setTipValue}
+            setBill={setBill}
             bill={bill}
-            max="3"
+            people={people}
+            setPeople={setPeople}
           />
         </div>
       </div>

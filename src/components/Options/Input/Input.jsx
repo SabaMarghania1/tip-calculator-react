@@ -1,12 +1,16 @@
 import Styles from "./input.module.css";
 
-function Input({label, icon}) {
-  console.log();
+function Input({label, icon, bill, setBill, people, setPeople}) {
   return (
     <div className={Styles.input__container}>
       <label className="label">{label}</label>
       <div className={Styles.input__box}>
-        <input type="number" min="0" />
+        <input
+          type="number"
+          min="0"
+          value={bill > 0 ? bill : ""}
+          onInput={e => setBill(+e.target.value)}
+        />
         <img className={Styles.icon} src={icon} alt="" />
       </div>
     </div>
