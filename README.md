@@ -1,8 +1,13 @@
-# React + Vite
+# Tip Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Tip Calculator project, a simple and efficient web application designed to calculate tips and split bills. This project is based on a challenge from [Frontend Mentor](https://www.frontendmentor.io).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Tip Calculation**: Easily calculate tips based on the total bill amount.
+- **Custom Tip Percentage**: Enter a custom tip percentage or choose from predefined options.
+- **Bill Splitting**: Split the bill among a specified number of people.
+
+## Demo
+
+Check out the live demo [here](#).
