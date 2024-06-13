@@ -15,20 +15,13 @@ function App() {
     people: '',
   });
 
-  function handleSelectTip(value) {
-    setValues({
-      ...values,
-      tip: value,
-    });
-  }
-
   return (
     <>
       <header>
         <Logo />
       </header>
       <main className="container">
-        <TipSettings onSelectTip={handleSelectTip} values={values} />
+        <TipSettings values={values} setValues={setValues} />
         <Display />
       </main>
     </>

@@ -1,14 +1,42 @@
 import React, {useState} from 'react';
 
-export default function TipSettings({onSelectTip, values}) {
+export default function TipSettings({values, setValues}) {
   const {tip, bill, people} = values;
+
+  function handleSelectTip(value) {
+    setValues({
+      ...values,
+      tip: value,
+    });
+  }
+
+  const handleBillChange = value => {
+    setValues({
+      ...values,
+      bill: value,
+    });
+  };
+
+  const handlePeopleChange = value => {
+    setValues({
+      ...values,
+      people: value,
+    });
+  };
 
   return (
     <div className="tip-settings">
       <div className="input-group">
         <label htmlFor="bill">Bill</label>
         <div className="input-container">
-          <input type="number" name="bill" min="0" className="input" />
+          <input
+            type="number"
+            name="bill"
+            min="0"
+            className="input"
+            onChange={e => handleBillChange(e.target.value)}
+            value={bill}
+          />
           <img src="/icon-dollar.svg" alt="usd image" />
         </div>
       </div>
@@ -22,7 +50,7 @@ export default function TipSettings({onSelectTip, values}) {
             return (
               <button
                 onClick={() => {
-                  onSelectTip(tipValue);
+                  handleSelectTip(tipValue);
                 }}
                 className={`tip-button normal ${tip === tipValue ? 'active' : ''}`}
                 key={tipValue}
@@ -39,7 +67,14 @@ export default function TipSettings({onSelectTip, values}) {
       <div className="input-group">
         <label htmlFor="people">Number of People</label>
         <div className="input-container">
-          <input type="number" name="people" min="0" className="input" />
+          <input
+            type="number"
+            name="people"
+            min="0"
+            className="input"
+            value={people}
+            onChange={e => handlePeopleChange(e.target.value)}
+          />
           <img src="/icon-person.svg" alt="person image" />
         </div>
       </div>

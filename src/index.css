@@ -155,8 +155,9 @@ label {
   border-radius: 15px;
   padding: 39px 22px 24px 24px;
   gap: 33px;
-  max-width: 413px;
-  width: 105%;
+
+  min-width: 327px;
+  width: 100%;
 }
 
 .panels {
