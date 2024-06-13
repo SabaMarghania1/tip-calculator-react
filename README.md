@@ -10,4 +10,4 @@ Welcome to the Tip Calculator project, a simple and efficient web application de
 
 ## Demo
 
-Check out the live demo [here](#).
+Check out the live demo [here](https://tip-calculator-react-8sbm.vercel.app/).
