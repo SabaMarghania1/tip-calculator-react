@@ -19,7 +19,9 @@ export default function Display() {
           <p className="amount">$32.79</p>
         </div>
       </div>
-      <button className="reset-btn">RESET</button>
+      <button disabled className="reset-btn">
+        RESET
+      </button>
     </div>
   );
 }

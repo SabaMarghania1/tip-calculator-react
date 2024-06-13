@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-export default function TipSettings() {
+export default function TipSettings({onSelectTip, values}) {
+  const {tip, bill, people} = values;
+
   return (
     <div className="tip-settings">
       <div className="input-group">
@@ -16,11 +18,20 @@ export default function TipSettings() {
           Select Tip %
         </label>
         <div className="tip-buttons">
-          {[5, 10, 15, 25, 50].map(tip => (
-            <button className="tip-button normal " key={tip} value={tip}>
-              {tip}%
-            </button>
-          ))}
+          {[5, 10, 15, 25, 50].map(tipValue => {
+            return (
+              <button
+                onClick={() => {
+                  onSelectTip(tipValue);
+                }}
+                className={`tip-button normal ${tip === tipValue ? 'active' : ''}`}
+                key={tipValue}
+                value={tipValue}
+              >
+                {tipValue}%
+              </button>
+            );
+          })}
           <input type="number" min="0" placeholder="Custom" className="tip-button custom" />
         </div>
       </div>
