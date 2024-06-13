@@ -1,26 +1,35 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function TipSettings({values, setValues}) {
-  const {tip, bill, people} = values;
+  const {tip, bill, people, customTip} = values;
 
   function handleSelectTip(value) {
     setValues({
       ...values,
-      tip: value,
+      customTip: '',
+      tip: +value,
     });
   }
 
   const handleBillChange = value => {
     setValues({
       ...values,
-      bill: value,
+      bill: +value,
     });
   };
 
   const handlePeopleChange = value => {
     setValues({
       ...values,
-      people: value,
+      people: +value,
+    });
+  };
+
+  const handleCustomTipChange = value => {
+    setValues({
+      ...values,
+      tip: 0,
+      customTip: +value,
     });
   };
 
@@ -32,10 +41,10 @@ export default function TipSettings({values, setValues}) {
           <input
             type="number"
             name="bill"
-            min="0"
             className="input"
             onChange={e => handleBillChange(e.target.value)}
             value={bill}
+            placeholder="0"
           />
           <img src="/icon-dollar.svg" alt="usd image" />
         </div>
@@ -60,20 +69,30 @@ export default function TipSettings({values, setValues}) {
               </button>
             );
           })}
-          <input type="number" min="0" placeholder="Custom" className="tip-button custom" />
+          <input
+            type="number"
+            placeholder="Custom"
+            value={customTip}
+            onChange={e => handleCustomTipChange(e.target.value)}
+            className={`tip-button custom ${customTip !== '' ? 'active-border' : ''}`}
+          />
         </div>
       </div>
 
       <div className="input-group">
-        <label htmlFor="people">Number of People</label>
+        <div className="label">
+          <label htmlFor="people">Number of People</label>
+          {people === 0 && <span className="error-p">Can't be zero</span>}
+        </div>
+
         <div className="input-container">
           <input
             type="number"
             name="people"
-            min="0"
-            className="input"
+            className={`input ${people === 0 ? 'error input-people' : ''}`}
             value={people}
             onChange={e => handlePeopleChange(e.target.value)}
+            placeholder="0"
           />
           <img src="/icon-person.svg" alt="person image" />
         </div>
